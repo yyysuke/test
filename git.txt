@@ -1,0 +1,6 @@
+・新しくbranchを切るときはgit checkout -b <ブランチ名>
+・local remote問わず既に存在しているbranchへの切り替えはgit checkout <ブランチ名>
+・ただし、git fetch　しないとリモートリポジトリの情報をローカルリポジトリに反映できてないため、
+git checkout <ブランチ名>でremoteのブランチ名を指定してもそんなのないよってなる
+･久しぶりに入るリポジトリがあったらとりあえず何も考えずgit fetch
+
