@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="./streams/connect-streams-min.js"></script>
+    <script type="text/javascript" src="./handler.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Custom_CCP</title>
+</head>
+    <body>
+        <div class="all_wrapper">
+            <div id="header_block">CCP_header</div>
+            <div id="ccpContainer"></div> <!-- 埋め込み用CCP -->
+            <div id="main_wrapper">
+                <div id="left_wrapper">
+                    <div id="customCCPDiv">
+                        <p class="agent_header">Agent Controls</p>
+                        <!-- custom user experience goes here -->
+                        <table style="display: inline-block;">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <button type="button" id="setReady" value="SetReady">Set Ready</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" id="setOffline" value="SetOffline">Set Offline</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table style="display: inline-block;">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <button type="button" id="ansCall" value="Answer Call">Answer Call</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" id="dropCall" value="Drop Call">Drop Call</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                            <div id="statusDiv">
+                                <div id="agentStatusDiv" style="padding: 5px;">
+                                </div>
+                            </div>
+                    </div>
+                    <div id="attributesDiv" style="width: 360px; min-width: 360px; height: 120px; min-height: 120px;">
+                        <p style="text-align:center">Contact Attributes</p>
+                        <div>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label for="firstName" style="width: 128px;">Full Name</label>
+                                        </td>
+                                        <td>
+                                            <input name="firstName" type="text" id="firstName" placeholder="First Name" style="width:129px">
+                                        </td>
+                                        <td>
+                                            <input name="lastName" type="text" id="lastName" placeholder="Last Name" style="width:129px">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="customerNumber" style="width: 128px;">Phone Number: </label>
+                                        </td>
+                                        <td>
+                                            <input name="customerNumber" type="text" id="customerNumber" placeholder="E.164 Format" style="width:129px">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="center_wrapper">
+                    <div id="Call_number">
+                        <ul id="tabarea">
+                            <li id="all">
+                                <a class="call_tab active" href="#">全件</a>
+                            </li> 
+                            <li id="shop">
+                                <a class="call_tab" href="#">支店</a>
+                            </li> 
+                            <li id="other">
+                                <a class="call_tab" href="#">その他</a>
+                            </li> 
+                        </ul>
+                        <ul id="tab_content_area">
+                            <li id="all_content" class="call_tab_content active" >
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <p>111111111111</p>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li> 
+                            <li id="shop_content" class="call_tab_content">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <p>22222222222222</p>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li> 
+                            <li id="other_content" class="call_tab_content">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <p>333333333333</p>
+                                        </tr>
+                                        <tr>
+                                            <p>9393939399</p>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li> 
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
