@@ -1,3 +1,4 @@
+/* 共通エリア */
 body {
     margin: 0px;
 }
@@ -12,6 +13,8 @@ ul{
 li{
     list-style:none
 }
+
+/* ヘッダー部分 */
 #header_block{
     width: 100%;
     height: 70px;
@@ -21,21 +24,19 @@ li{
     overflow: hidden;
 }
 
-
+/* メイン部分 */
 #main_wrapper{
     display: flex;
     height: 600px;
 }
+
+/* メイン左 */
 #left_wrapper{
     background-color: darkblue;
     height: auto;
     resize: both;
 }
-#center_wrapper{
-    background-color: gray;
-    max-width: auto;
-    resize: both;
-}
+
 #ccpContainer{
     background-color: brown;
     width: 320px; 
@@ -57,6 +58,12 @@ li{
     
 }
 
+/* メイン中央 */
+#center_wrapper{
+    background-color: gray;
+    max-width: auto;
+    resize: both;
+}
 
 
 
@@ -68,14 +75,17 @@ li{
     height: auto; 
     min-height: auto;
     background-color: aquamarine;
+    overflow: hidden;
 }
 #tabarea{
     display: flex;
     background-color:grey;
-    width: auto;
+    width: 600px;
     height: 50px;
-    margin-left: 7px;
+    /* margin-left: 7px; */
+    padding-left: 7px;
     /* justify-content: space-between; */
+    align-items: flex-end; /* 横並び下揃え */
 }
 #tabarea li{
     width: 20%;
@@ -85,6 +95,21 @@ li{
     
 } */
 
+/* 検索エリア */
+#search_area{
+    width: auto;
+    height: 50px;
+    background-color: cadetblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#input_keyword{
+    height: 30px;
+}
+.mr7{
+    margin-right: 7px;
+}
 
 .call_tab{
     text-align: center;
@@ -95,32 +120,54 @@ li{
     justify-content: center;
     display: flex;
     align-items: center;
-    height: 45px;
+    height: 35px;
 
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     text-decoration: none;
     color: black;
 }
 .call_tab:hover{
-    background-color: aqua;
+    background-color:yellow;
     opacity: 50%;
 }
 .call_tab.active{
-    background-color: blue;
+    background-color:bisque;
 }
 
 
 #tab_content_area{
     width: auto;
-    height: auto;
+    /* height: auto; */
+    height: 550px;
     background-color: bisque;
-    margin-left: 7px;
+    /* margin-left: 7px; */
+    /* padding-left: 1rem; */
+    /* overflow:scroll; */
 }
 .call_tab_content{
     display: none;
 }
 .call_tab_content.active{
     display: block;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
+}
+
+/* 電話帳エリア */
+#all_content_area{
+    height: 500px;
+    padding-left: 1rem;
+    overflow-y: scroll;
+}
+
+
+
+
+.selectlist_contents{
+    padding-left: 5px;
+}
+
+.selectlist_contents:hover{
+    background-color: aqua;
+    padding-left: 7px;
 }
